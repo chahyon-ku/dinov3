@@ -3,7 +3,7 @@
 # This software may be used and distributed in accordance with
 # the terms of the DINOv3 License Agreement.
 
-from typing import List, Union
+from typing import List, Optional, Union
 
 import torch
 from dinov3.thirdparty.CLIP.clip.simple_tokenizer import SimpleTokenizer
@@ -46,7 +46,7 @@ class Tokenizer(SimpleTokenizer):
         return result
 
 
-def get_tokenizer(bpe_path_or_url: str) -> Tokenizer | None:
+def get_tokenizer(bpe_path_or_url: str) -> Optional[Tokenizer]:
     import urllib
     from io import BytesIO
 

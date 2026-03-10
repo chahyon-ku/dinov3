@@ -30,7 +30,7 @@ class WarmupOneCycleLR(torch_schedulers.LRScheduler):
     def __init__(
         self,
         optimizer: Optimizer,
-        max_lr: float | None = None,
+        max_lr: Optional[float] = None,
         total_steps: int = 0,
         warmup_iters: int = 0,
         warmup_ratio: float = 0.0,
